@@ -8,3 +8,138 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+
+body{
+    width: 100%;
+    margin: auto;
+    
+}
+
+
+
+#logo{
+   width: 100%;
+   height: 60px;
+   background-color:white;
+   box-shadow: 2px;
+   margin: auto;
+   @include flexMid();
+
+        img{
+            width: 34%;
+        }
+
+}
+
+#location{
+    width: 100%;
+    height: 60px;
+    background-color: #dfdfdf;
+    margin: auto;
+    @include flexMid();
+    p i {
+        margin-right: 15px;
+    }
+}
+
+
+#section1-bg-color{
+    width: 100%;
+    height: 260px;
+    background-color: #f7f7f7;
+}
+
+#container-first-section{
+    width: 70%;
+    margin: auto;
+    @include flexMid();
+    flex-direction: column;
+    text-align: center;
+        h1{
+            margin-bottom: 0px;
+            margin-top: 30px;
+        }
+
+        h2{
+            font-size: large;
+            font-weight: 700;
+        }
+
+        button{
+            height: 40px;
+            border-radius: 25px;
+            border: 0px solid;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: small;
+            font-weight: 700;
+            color: white;
+            margin-top: 15px;
+            background: linear-gradient(pink, purple);
+        }
+}
+
+
+#section2-bg-color{
+    width: 100%;
+    background-color: white;
+    height: 300px;
+
+        h2{
+           margin-left: 30px; 
+        }
+}
+
+
+
+#container-second-section{
+    width: 70%;
+    margin: auto;
+    @include flexMid();
+    flex-direction: column;
+    
+        .btn-settings{
+            width: 100%;
+            margin: 10px;
+            
+                button{
+                    width: 100%;
+                    height: 60px;
+                    border: 0px solid;
+                    border-radius: 20px;
+                    font-weight: 700;
+
+                        &:hover{
+                           background-color:#ffcff1;
+                        }
+                    
+                }
+        }
+}
+
+
+#section3-bg-color{
+    width: 100%;
+    background-color: #f7f7f7;
+    height: 350px;
+
+        h2{
+           margin-left: 30px; 
+           margin-top: 40px;
+        }
+}
+
+
+//Footer
+
+footer{
+    background-color:rgb(56, 53, 53) ;
+    color: white;
+    width: 100%;
+    height: 200px;
+        img{
+            width: 25%;
+        }
+       
+}
