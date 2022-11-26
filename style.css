@@ -1,26 +1,33 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
 body {
-  width: 100%;
-  margin: auto;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 #logo {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background-color: white;
-  box-shadow: 2px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #logo img {
+  display: block;
   width: 34%;
+  height: auto;
 }
 
 #location {
   width: 100%;
   height: 60px;
-  background-color: #dfdfdf;
+  background-color: #efebeb;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -72,11 +79,11 @@ body {
   height: 300px;
 }
 #section2-bg-color h2 {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 #container-second-section {
-  width: 70%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -93,19 +100,88 @@ body {
   border: 0px solid;
   border-radius: 20px;
   font-weight: 700;
+  position: relative;
 }
 #container-second-section .btn-settings button:hover {
   background-color: #ffcff1;
+}
+#container-second-section .btn-settings button span {
+  display: block;
+  color: #efebeb;
+  padding: 10px;
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
 }
 
 #section3-bg-color {
   width: 100%;
   background-color: #f7f7f7;
-  height: 350px;
+  height: auto;
 }
 #section3-bg-color h2 {
-  margin-left: 30px;
-  margin-top: 40px;
+  margin-left: 20px;
+}
+
+#container-third-section .label-nouveau {
+  position: relative;
+}
+#container-third-section .new {
+  position: absolute;
+  right: 10%;
+  margin-top: 3%;
+  color: #224d0f;
+  background-color: #99E2D0;
+  padding: 5px;
+}
+
+.card {
+  width: 90%;
+  height: 200px;
+  margin: 10px auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.img-restaurant {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+}
+.img-restaurant img {
+  width: 100%;
+  height: auto;
+}
+
+.title-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-card H3 {
+  margin: 5px 0px 0px 10px;
+}
+.title-card P {
+  margin: 0px 0px 0px 10px;
+}
+.title-card .fa-heart {
+  color: #9356DC;
+  font-size: x-large;
+  margin-right: 10px;
 }
 
 footer {
