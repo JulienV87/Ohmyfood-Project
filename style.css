@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: roboto, sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -11,7 +11,7 @@ body {
 
 #logo {
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: white;
   margin: auto;
   display: flex;
@@ -20,15 +20,16 @@ body {
 }
 #logo img {
   display: block;
-  width: 34%;
+  width: 170px;
   height: auto;
 }
 
 #location {
   width: 100%;
-  height: 60px;
-  background-color: #efebeb;
+  height: 50px;
+  background-color: rgb(237, 235, 235);
   margin: auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1) inset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +40,12 @@ body {
 
 #section1-bg-color {
   width: 100%;
-  height: 260px;
+  height: auto;
   background-color: #f7f7f7;
 }
 
 #container-first-section {
-  width: 70%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -57,29 +58,35 @@ body {
   margin-top: 30px;
 }
 #container-first-section h2 {
-  font-size: large;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 100;
 }
 #container-first-section button {
   height: 40px;
-  border-radius: 25px;
+  border-radius: 9999px;
   border: 0px solid;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: small;
-  font-weight: 700;
+  padding: 25px;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   margin-top: 15px;
-  background: linear-gradient(pink, purple);
+  margin-bottom: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 #section2-bg-color {
   width: 100%;
   background-color: white;
-  height: 300px;
+  height: auto;
+  margin-bottom: 60px;
 }
 #section2-bg-color h2 {
   margin-left: 20px;
+  margin-top: 50px;
 }
 
 #container-second-section {
@@ -96,19 +103,30 @@ body {
 }
 #container-second-section .btn-settings button {
   width: 100%;
-  height: 60px;
+  height: 70px;
+  padding-right: 30px;
+  font-family: roboto;
+  font-size: 1rem;
+  background-color: 245, 245, 245;
   border: 0px solid;
   border-radius: 20px;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #container-second-section .btn-settings button:hover {
-  background-color: #ffcff1;
+  background-color: rgb(242, 232, 255);
+}
+#container-second-section .btn-settings button:hover .fa-solid {
+  color: #9356DC;
+  opacity: 1;
 }
 #container-second-section .btn-settings button span {
   display: block;
   color: #efebeb;
-  padding: 10px;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 14px;
   background-color: #9356DC;
   width: 20px;
   height: 20px;
@@ -119,9 +137,16 @@ body {
   position: absolute;
   left: -10px;
 }
+#container-second-section .btn-settings button .fa-solid {
+  margin-right: 20px;
+  font-size: 18px;
+  opacity: 0.5;
+}
 
 #section3-bg-color {
   width: 100%;
+  padding-top: 30px;
+  margin-top: 30px;
   background-color: #f7f7f7;
   height: auto;
 }
@@ -129,6 +154,10 @@ body {
   margin-left: 20px;
 }
 
+#container-third-section {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
 #container-third-section .label-nouveau {
   position: relative;
 }
@@ -143,37 +172,42 @@ body {
 
 .card {
   width: 90%;
-  height: 200px;
-  margin: 10px auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: auto;
+  margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
 }
 
 .img-restaurant {
   width: 100%;
-  height: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 175px;
+  background-color: #81817c;
   margin: auto;
   overflow: hidden;
   border-radius: 10px 10px 0px 0px;
 }
 .img-restaurant img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.img-restaurant img#position-img {
+  -o-object-position: 0px -115px;
+     object-position: 0px -115px;
 }
 
 .title-card {
   width: 100%;
-  height: auto;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .title-card H3 {
-  margin: 5px 0px 0px 10px;
+  margin: 0px 0px 0px 10px;
 }
 .title-card P {
   margin: 0px 0px 0px 10px;
@@ -190,6 +224,23 @@ footer {
   width: 100%;
   height: 200px;
 }
-footer img {
-  width: 25%;
+footer ul {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 30px;
+  list-style-type: none;
+  line-height: 25px;
+}
+footer span {
+  display: block;
+  font-family: shrikhand;
+  font-size: 1rem;
+  padding: 20px;
+  margin-left: 5px;
+}
+footer .fa-utensils {
+  margin-right: 5px;
+}
+footer .fa-handshake-angle {
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */
