@@ -15,16 +15,16 @@ align-items: center;
 
 
 body{
-    font-family: roboto, sans-serif;
+    font-family: Roboto, shrikhand, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
 }
     
 
 
 
-#logo{
+.logo{
    width: 100%;
    height: 60px;
    background-color:white;
@@ -43,7 +43,7 @@ body{
 #location{
     width: 100%;
     height: 50px;
-    background-color: rgb(237, 235, 235);
+    background-color: rgb(229, 229, 229);
     margin: auto;
     box-shadow: 0px 2px 2px rgba(0,0,0,0.1) inset;
     @include flexMid();
@@ -56,7 +56,7 @@ body{
 #section1-bg-color{
     width: 100%;
     height: auto;
-    background-color: #f7f7f7;
+    background-color:rgb(245,245,245)
 }
 
 #container-first-section{
@@ -124,7 +124,7 @@ body{
                 padding-right: 30px;
                 font-family: roboto;
                 font-size: 1rem;
-                background-color: 245,245,245;
+                background-color: rgb(245,245,245);
                 border: 0px solid;
                 border-radius: 20px;
                 font-weight: 500;
@@ -310,4 +310,156 @@ footer{
 
 
     }
+
+/*Page Menu La Palette Du Gout*/
+
+.logo-retour-accueil{
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+    .arrow-home{
+        position: absolute;
+        left: 20px;
+    }
+
+
+    img{
+        display: block;
+        width: 150px;
+        margin: auto;
+    }
+
+}
+
+.img-restaurant-menu{
+
+    width: 100%;
+    height: 250px;
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    }
+  
+}
+
+.Menu-restaurant{
+
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-color: rgb(242, 242, 242);
+    border-radius: 30px 30px 0px 0px;
+    top: 245px;
+        h1{
+            font-family: shrikhand;
+            font-size: 22px;
+            font-weight: 100;
+            margin: 0px;
+            padding-left: 15px;
+        }
+    
+
+}
+
+.title-menu{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+        .fa-heart{
+
+            color:#9356DC;
+            font-size: 24px;
+            margin-right: 30px;
+        }
+
+}
+
+
+
+.section-menu{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    h2{
+        text-transform: uppercase;
+        margin: 0;
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 13px;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 8px;
+    }
+    h2:after{
+        content: "";
+        position: absolute;
+        width: 30px;
+        top: 20px;
+        left: 0%;
+        border-bottom: 2px solid $couleur-tertiare
+        
+
+    }
+
+    article{
+
+        background-color: white;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        margin: 10px 0px;
+        padding: 10px;
+        border-radius: 10px;
+            
+    }
+
+    h3{
+        margin: 0px;
+        margin-bottom: 3px;
+        padding: 0px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .plats{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            p{
+                margin: 0px;
+                font-size: 12px;
+                font-weight: 300;
+            }
+            .price{
+                font-weight: 500;
+            }
+    }
+
+}
+
+.checkout{
+            height: 40px;
+            border-radius: 9999px;
+            border: 0px solid;
+            padding: 5px 40px;
+            font-family: roboto;
+            font-weight:400;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 50px;
+            background: linear-gradient($couleur-secondaire, $couleur-primaire) ;
+
+
+
+}
+
 
