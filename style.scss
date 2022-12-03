@@ -56,7 +56,7 @@ body{
 #section1-bg-color{
     width: 100%;
     height: auto;
-    background-color:rgb(245,245,245)
+    background-color:rgb(245,245,245);
 }
 
 #container-first-section{
@@ -89,7 +89,8 @@ body{
             color: white;
             margin-top: 15px;
             margin-bottom: 50px;
-            background: linear-gradient($couleur-secondaire, $couleur-primaire) ;
+            background: linear-gradient($couleur-secondaire, $couleur-primaire);
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
         }
 }
 
@@ -234,7 +235,7 @@ body{
         object-fit:cover;
         object-position: bottom;
             &#position-img{
-                object-position:0px -115px ;
+                object-position:0px -115px;
             
             }
         
@@ -273,10 +274,11 @@ body{
 //Footer
 
 footer{
-    background-color:rgb(56, 53, 53) ;
+    background-color:rgb(56, 53, 53);
     color: white;
     width: 100%;
-    height: 200px;
+    height: auto;
+    padding-bottom: 20px;
 
         ul{
             margin: 0px;
@@ -327,7 +329,7 @@ align-items: center;
 
     img{
         display: block;
-        width: 150px;
+        width: 130px;
         margin: auto;
     }
 
@@ -403,7 +405,7 @@ img{
         width: 30px;
         top: 20px;
         left: 0%;
-        border-bottom: 2px solid $couleur-tertiare
+        border-bottom: 2px solid $couleur-tertiare;
         
 
     }
@@ -447,7 +449,7 @@ img{
             border: 0px solid;
             padding: 5px 40px;
             font-family: roboto;
-            font-weight:400;
+            font-weight:300;
             font-size: 13px;
             display: flex;
             justify-content: center;
@@ -455,11 +457,34 @@ img{
             margin: auto;
             color: white;
             margin-top: 15px;
-            margin-bottom: 50px;
-            background: linear-gradient($couleur-secondaire, $couleur-primaire) ;
+            margin-bottom:30px;
+            background: linear-gradient($couleur-secondaire, $couleur-primaire);
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 
 
 
+}
+
+.footer{
+    font-size: 13px;
+
+    span{
+        font-size: 14px;
+        padding: 20px 0px 10px 0px;
+        margin-left: 22px;
+        
+    }
+    ul{ 
+        margin-left: 20px;
+    }
+        
+    .fa-utensils {
+        font-size: 11px;
+    }
+
+    .fa-handshake-angle{
+        font-size: 10px;
+    }
 }
 
 
