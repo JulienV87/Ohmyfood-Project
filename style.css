@@ -38,7 +38,7 @@ body {
   margin-right: 15px;
 }
 
-#section1-bg-color {
+#section1--bg-color {
   width: 100%;
   height: auto;
   background-color: rgb(245, 245, 245);
@@ -84,13 +84,13 @@ body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
-#section2-bg-color {
+#section2--bg-color {
   width: 100%;
   background-color: white;
   height: auto;
   margin-bottom: 60px;
 }
-#section2-bg-color h2 {
+#section2--bg-color h2 {
   margin-left: 20px;
   margin-top: 50px;
 }
@@ -106,6 +106,7 @@ body {
 #container-second-section .btn-settings {
   width: 100%;
   margin: 10px;
+  max-width: 850px;
 }
 #container-second-section .btn-settings button {
   width: 100%;
@@ -151,14 +152,14 @@ body {
   opacity: 0.5;
 }
 
-#section3-bg-color {
+#section3--bg-color {
   width: 100%;
   padding-top: 30px;
   margin-top: 30px;
   background-color: #f7f7f7;
   height: auto;
 }
-#section3-bg-color h2 {
+#section3--bg-color h2 {
   margin-left: 20px;
 }
 
@@ -185,6 +186,7 @@ a {
 
 .card {
   width: 90%;
+  max-width: 850px;
   height: auto;
   margin: 20px auto;
   border-radius: 10px;
@@ -278,35 +280,38 @@ a {
   fill: black;
 }
 
-footer {
+.footer-home {
   background-color: rgb(56, 53, 53);
   color: white;
   width: 100%;
   height: auto;
   padding-bottom: 20px;
 }
-footer ul {
+.footer-home ul {
   margin: 0px;
   padding: 0px;
   margin-left: 30px;
   list-style-type: none;
   line-height: 25px;
 }
-footer span {
+.footer-home a {
+  color: white;
+}
+.footer-home span {
   display: block;
   font-family: shrikhand;
   font-size: 1rem;
   padding: 20px;
   margin-left: 5px;
 }
-footer .fa-utensils {
+.footer-home .fa-utensils {
   margin-right: 5px;
 }
-footer .fa-handshake-angle {
+.footer-home .fa-handshake-angle {
   margin-right: 5px;
 }
 
-/*Page Menu La Palette Du Gout*/
+/*Pages des 4 Menus*/
 .logo-retour-accueil {
   width: 100%;
   height: 50px;
@@ -345,7 +350,7 @@ footer .fa-handshake-angle {
 }
 .Menu-restaurant h1 {
   font-family: shrikhand;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 100;
   margin: 0px;
   padding-left: 15px;
@@ -375,7 +380,7 @@ footer .fa-handshake-angle {
   margin: 0;
   font-family: Roboto;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 18px;
   display: inline-block;
   position: relative;
   margin-bottom: 8px;
@@ -383,8 +388,8 @@ footer .fa-handshake-angle {
 .section-menu h2:after {
   content: "";
   position: absolute;
-  width: 30px;
-  top: 20px;
+  width: 45px;
+  top: 24px;
   left: 0%;
   border-bottom: 2px solid #99E2D0;
 }
@@ -399,8 +404,11 @@ footer .fa-handshake-angle {
   margin: 0px;
   margin-bottom: 3px;
   padding: 0px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .section-menu .plats {
   display: flex;
@@ -409,21 +417,73 @@ footer .fa-handshake-angle {
 }
 .section-menu .plats p {
   margin: 0px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .section-menu .plats .price {
   font-weight: 500;
 }
 
+/*Sections Menus Animations Opacity*/
+.section-entrees {
+  -webkit-animation: OpacityMenuAnimation -1ms linear 1s;
+          animation: OpacityMenuAnimation -1ms linear 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.section-plats {
+  -webkit-animation: OpacityMenuAnimation -1ms linear 1.5s;
+          animation: OpacityMenuAnimation -1ms linear 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.section-desserts {
+  -webkit-animation: OpacityMenuAnimation -1ms linear 2s;
+          animation: OpacityMenuAnimation -1ms linear 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes OpacityMenuAnimation {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes OpacityMenuAnimation {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
 .checkout {
   height: 40px;
   border-radius: 9999px;
   border: 0px solid;
-  padding: 5px 40px;
+  padding: 25px 50px;
   font-family: roboto;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,4 +515,196 @@ footer .fa-handshake-angle {
 }
 .footer .fa-handshake-angle {
   font-size: 10px;
+}
+
+/*Page Loader*/
+.loader-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(239, 235, 235, 0.5);
+  opacity: 0.8;
+}
+
+.pan-loader {
+  width: 180px;
+  height: 180px;
+}
+.pan-loader .loader {
+  position: relative;
+  top: 10%;
+  left: 0;
+  z-index: -1;
+  width: 60%;
+  height: 45%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: loader 2s infinite;
+          animation: loader 2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.pan-loader .pan-container {
+  display: flex;
+  width: 100%;
+  -webkit-animation: pan 2s infinite;
+          animation: pan 2s infinite;
+}
+.pan-loader .pan {
+  width: 60%;
+  height: 24px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pan-loader .handle {
+  width: 40%;
+  height: 10px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.pan-loader .shadow {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+  height: 8px;
+  background: lightgray;
+  border-radius: 20px;
+  -webkit-animation: shadow 2s infinite;
+          animation: shadow 2s infinite;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -56,7 +56,7 @@ body{
 }
 
 
-#section1-bg-color{
+#section1--bg-color{
     width: 100%;
     height: auto;
     background-color:rgb(245,245,245);
@@ -103,7 +103,7 @@ body{
 }
 
 
-#section2-bg-color{
+#section2--bg-color{
     width: 100%;
     background-color: white;
     height: auto;
@@ -126,6 +126,7 @@ body{
         .btn-settings{
             width: 100%;
             margin: 10px;
+            max-width: 850px;
             
             button{
                 width: 100%;
@@ -186,7 +187,7 @@ body{
 
 
 
-#section3-bg-color{
+#section3--bg-color{
     width: 100%;
     padding-top: 30px;
     margin-top: 30px;
@@ -225,8 +226,11 @@ a{
     color: black;
 }
 
+
+
 .card {
     width: 90%;
+    max-width: 850px;
     height: auto;
     margin: 20px auto;
     border-radius: 10px;
@@ -332,7 +336,7 @@ a{
 
 //Footer
 
-footer{
+.footer-home{
     background-color:rgb(56, 53, 53);
     color: white;
     width: 100%;
@@ -345,10 +349,12 @@ footer{
             margin-left: 30px;
             list-style-type: none;
             line-height: 25px;
-
-
         }
-    
+
+        a{
+            color: white;
+        }
+
 
         span{
             display: block;
@@ -362,6 +368,7 @@ footer{
         .fa-utensils {
 
             margin-right: 5px;
+            
         }
 
         .fa-handshake-angle{
@@ -369,10 +376,10 @@ footer{
             margin-right: 5px;
         }
 
-
     }
+    
 
-/*Page Menu La Palette Du Gout*/
+/*Pages des 4 Menus*/
 
 .logo-retour-accueil{
 width: 100%;
@@ -416,7 +423,7 @@ img{
     top: 245px;
         h1{
             font-family: shrikhand;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 100;
             margin: 0px;
             padding-left: 15px;
@@ -453,7 +460,7 @@ img{
         margin: 0;
         font-family: Roboto;
         font-weight: 300;
-        font-size: 13px;
+        font-size: 18px;
         display: inline-block;
         position: relative;
         margin-bottom: 8px;
@@ -461,8 +468,8 @@ img{
     h2:after{
         content: "";
         position: absolute;
-        width: 30px;
-        top: 20px;
+        width: 45px;
+        top: 24px;
         left: 0%;
         border-bottom: 2px solid $couleur-tertiare;
         
@@ -476,6 +483,7 @@ img{
         margin: 10px 0px;
         padding: 10px;
         border-radius: 10px;
+        
             
     }
 
@@ -483,8 +491,12 @@ img{
         margin: 0px;
         margin-bottom: 3px;
         padding: 0px;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
     }
     .plats{
         display: flex;
@@ -492,8 +504,11 @@ img{
         align-items: center;
             p{
                 margin: 0px;
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: 300;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
             .price{
                 font-weight: 500;
@@ -502,14 +517,45 @@ img{
 
 }
 
+/*Sections Menus Animations Opacity*/
+
+.section-entrees{
+    animation: OpacityMenuAnimation -1ms linear 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.section-plats{
+    animation: OpacityMenuAnimation -1ms linear 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.section-desserts{
+    animation: OpacityMenuAnimation -1ms linear 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes OpacityMenuAnimation {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+     }
+}
+
+
+
 .checkout{
             height: 40px;
             border-radius: 9999px;
             border: 0px solid;
-            padding: 5px 40px;
+            padding: 25px 50px;
             font-family: roboto;
             font-weight:300;
-            font-size: 13px;
+            font-size: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -551,3 +597,146 @@ img{
 }
 
 
+/*Page Loader*/
+
+$timing: 2s;
+$color-shadow: lightgray;
+$pan-color-light: #9356DC;
+$pan-color-dark: #FF79DA;
+$loader-color: #99E2D0;
+
+
+
+.loader-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(239, 235, 235, 0.5);
+    opacity: 0.8;
+        
+}
+
+
+.pan-loader {
+  width: 180px;
+  height: 180px;
+  
+  
+  .loader {
+    position: relative;
+    top: 10%;
+    left: 0;
+    z-index: -1;
+    width: 60%;
+    height: 45%;
+    border: 10px solid transparent;
+    border-bottom: 10px solid $loader-color;
+    border-radius: 50%;
+    animation: loader $timing infinite;
+    animation-timing-function: linear;
+  }
+
+  .pan-container {
+    display:flex;
+    width: 100%;
+    animation: pan $timing infinite;
+  }
+
+  .pan {
+    width: 60%;
+    height: 24px;
+    background: linear-gradient($pan-color-light, $pan-color-dark);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .handle {
+    width: 40%;
+    height: 10px;
+    background: linear-gradient($pan-color-light, $pan-color-dark);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .shadow {
+    position: relative;
+    top: 15%;
+    left: 15%;
+    width: 30%;
+    height: 8px;
+    background: $color-shadow;
+    // box-shadow: 5px 0 8px 4px $color-shadow;
+    border-radius: 20px;
+    animation: shadow $timing infinite;
+  }
+}
+
+    @keyframes loader {
+    0% {
+      width: 10%;
+      transform: rotate(0deg);
+    }
+    10% {
+      left: 0%;
+      transform: rotate(0deg);
+    }
+    20% {
+      width: 0%;
+      left: 20%;
+    }
+    30% {
+      width: 25%;
+    }
+    50% {
+      left: 15%;
+      width: 35%;
+    }
+    70% {
+      width: 30%;
+      left: 18%;
+      transform: rotate(240deg);
+    }
+    90% {
+      width: 30%;
+      left: 10%;
+    }
+    100% {
+      width: 2%;
+      left: 25%;
+      transform: rotate(360deg);
+    }
+  }
+  
+    @keyframes pan {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top right;
+    }
+    10% {
+      transform: rotate(-2deg);
+      transform-origin: top right;
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+    @keyframes shadow {
+    0% {
+      width: 30%;
+    }
+    50% {
+      width: 40%;
+      left: 20px;
+    }
+    100% {
+      width: 30%;
+    }
+  }
