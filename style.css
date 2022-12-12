@@ -429,51 +429,62 @@ a {
 
 /*Sections Menus Animations Opacity*/
 .section-entrees {
-  -webkit-animation: OpacityMenuAnimation -1ms linear 1s;
-          animation: OpacityMenuAnimation -1ms linear 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  opacity: 0;
+  -webkit-animation-name: OpacityMenuAnimation;
+          animation-name: OpacityMenuAnimation;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .section-plats {
-  -webkit-animation: OpacityMenuAnimation -1ms linear 1.5s;
-          animation: OpacityMenuAnimation -1ms linear 1.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation-name: OpacityMenuAnimation;
+          animation-name: OpacityMenuAnimation;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .section-desserts {
-  -webkit-animation: OpacityMenuAnimation -1ms linear 2s;
-          animation: OpacityMenuAnimation -1ms linear 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation-name: OpacityMenuAnimation;
+          animation-name: OpacityMenuAnimation;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @-webkit-keyframes OpacityMenuAnimation {
   0% {
-    scale: 0;
     opacity: 0;
+    scale: 0;
+    rotate: 360deg;
   }
   100% {
-    scale: 1;
     opacity: 1;
+    scale: 1;
   }
 }
 
 @keyframes OpacityMenuAnimation {
   0% {
-    scale: 0;
     opacity: 0;
+    scale: 0;
+    rotate: 360deg;
   }
   100% {
-    scale: 1;
     opacity: 1;
+    scale: 1;
   }
 }
 .checkout {
@@ -524,8 +535,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(239, 235, 235, 0.5);
-  opacity: 0.8;
+  background-color: rgb(239, 235, 235);
+  opacity: 1;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  -webkit-animation: loader-page 6s forwards;
+          animation: loader-page 6s forwards;
 }
 
 .pan-loader {
@@ -707,4 +724,23 @@ a {
   100% {
     width: 30%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+@-webkit-keyframes loader-page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -999;
+  }
+}
+@keyframes loader-page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -999;
+  }
+}
+/*Affichage Tablette et desktop*//*# sourceMappingURL=style.css.map */

@@ -520,29 +520,38 @@ img{
 /*Sections Menus Animations Opacity*/
 
 .section-entrees{
-    animation: OpacityMenuAnimation -1ms linear 1s;
-    animation-iteration-count: 1;
+    opacity: 0;
+    animation-name: OpacityMenuAnimation;
+    animation-duration: 500ms;
+    animation-delay: 500ms;
     animation-fill-mode: forwards;
 }
 .section-plats{
-    animation: OpacityMenuAnimation -1ms linear 1.5s;
-    animation-iteration-count: 1;
+    animation-name: OpacityMenuAnimation;
+    animation-duration: 500ms;
+    animation-delay: 1000ms;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
 .section-desserts{
-    animation: OpacityMenuAnimation -1ms linear 2s;
-    animation-iteration-count: 1;
+    animation-name: OpacityMenuAnimation;
+    animation-duration: 500ms;
+    animation-delay: 1500ms;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
   
 @keyframes OpacityMenuAnimation {
     0% {
-        scale: 0;
+        
         opacity: 0;
+        scale: 0;
+        rotate: (360deg);
     }
     100% {
-        scale: 1;
+        
         opacity: 1;
+        scale: 1;
      }
 }
 
@@ -613,8 +622,13 @@ $loader-color: #99E2D0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(239, 235, 235, 0.5);
-    opacity: 0.8;
+    background-color: rgba(239, 235, 235, 1);
+    opacity: 1;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    animation: loader-page 6s forwards;
         
 }
 
@@ -669,7 +683,6 @@ $loader-color: #99E2D0;
     width: 30%;
     height: 8px;
     background: $color-shadow;
-    // box-shadow: 5px 0 8px 4px $color-shadow;
     border-radius: 20px;
     animation: shadow $timing infinite;
   }
@@ -739,4 +752,21 @@ $loader-color: #99E2D0;
     100% {
       width: 30%;
     }
+  }
+
+  @keyframes loader-page {
+    0% {
+      opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -999;
+    }
+  }
+
+
+  /*Affichage Tablette et desktop*/
+  @media screen and (min-width: 850px) and (max-width: 1000px){
+
+    
   }
