@@ -167,12 +167,9 @@ body {
   margin-bottom: 50px;
   cursor: pointer;
 }
-#container-third-section .label-nouveau {
-  position: relative;
-}
 #container-third-section .new {
   position: absolute;
-  right: 10%;
+  right: 5%;
   margin-top: 3%;
   color: #224d0f;
   background-color: #99E2D0;
@@ -200,6 +197,7 @@ a {
   margin: auto;
   overflow: hidden;
   border-radius: 10px 10px 0px 0px;
+  position: relative;
 }
 .img-restaurant img {
   width: 100%;
@@ -371,6 +369,7 @@ a {
 
 .section-menu {
   width: 95%;
+  max-width: 850px;
   height: auto;
   margin: auto;
   margin-bottom: 30px;
@@ -394,11 +393,17 @@ a {
   border-bottom: 2px solid #99E2D0;
 }
 .section-menu article {
+  width: 100%;
   background-color: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   margin: 10px 0px;
   padding: 10px;
   border-radius: 10px;
+}
+.section-menu .prix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-menu h3 {
   margin: 0px;
@@ -743,4 +748,24 @@ a {
     z-index: -999;
   }
 }
-/*Affichage Tablette et desktop*//*# sourceMappingURL=style.css.map */
+/*Affichage Tablette et desktop*/
+@media screen and (min-width: 1024px) {
+  .article-homepage {
+    width: 50%;
+  }
+  #container-third-section {
+    display: flex;
+  }
+  .desktop-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+  }
+  .footer-home span {
+    display: none;
+  }
+  .footer-home {
+    padding: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
