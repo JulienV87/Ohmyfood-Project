@@ -201,7 +201,7 @@ body{
 
 #container-third-section{
 
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     cursor: pointer;
 
 
@@ -232,7 +232,6 @@ a{
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
-    
 }
 
 .img-restaurant{
@@ -474,8 +473,14 @@ img{
         
 
     }
+}
 
-    article{
+
+
+
+
+
+    .article__menus{
         width: 100%;
         background-color: white;
         box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
@@ -502,9 +507,11 @@ img{
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        display: inline-block;
 
     }
     .plats{
+        // background-color: salmon;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -518,10 +525,11 @@ img{
             }
             .price{
                 font-weight: 500;
+                height: 100%;
             }
     }
 
-}
+
 
 /*Sections Menus Animations Opacity*/
 
