@@ -796,7 +796,7 @@ h3 {
   }
 }
 /*Affichage Tablette et desktop*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .article-homepage {
     width: 50%;
   }
@@ -805,12 +805,14 @@ h3 {
   }
   .desktop-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding-top: 50px;
   }
   .footer-home span {
-    display: none;
+    text-align: center;
+    font-size: 2rem;
   }
   .footer-home {
     padding: 20px;
