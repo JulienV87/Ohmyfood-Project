@@ -429,14 +429,23 @@ h3 {
 
 .container__text {
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .container__text .titre-plats {
   margin-bottom: 6px;
   padding: 10px 0px 0px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .container__text .complementary-title {
   margin: 0px;
   padding: 0px 0px 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .container__price {
@@ -787,7 +796,7 @@ h3 {
   }
 }
 /*Affichage Tablette et desktop*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .article-homepage {
     width: 50%;
   }
@@ -806,7 +815,11 @@ h3 {
   .footer-home {
     padding: 20px;
   }
-}
-#section2--bg-color, #section3--bg-color > h2 {
-  text-align: center;
+  #section2--bg-color, #section3--bg-color > h2 {
+    text-align: center;
+  }
+  .title-menu {
+    justify-content: center;
+    gap: 5px;
+  }
 }/*# sourceMappingURL=style.css.map */
