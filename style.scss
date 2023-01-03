@@ -66,7 +66,7 @@ body{
 
         h2{
             font-size: 1rem;
-            font-weight: 100;
+            font-weight: 10;
         }
 
         button{
@@ -526,20 +526,20 @@ img{
 .section-entrees{
     opacity: 0;
     animation-name: OpacityMenuAnimation;
-    animation-duration: 500ms;
+    animation-duration: 1500ms;
     animation-delay: 500ms;
     animation-fill-mode: forwards;
 }
 .section-plats{
     animation-name: OpacityMenuAnimation;
-    animation-duration: 500ms;
+    animation-duration: 1500ms;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 .section-desserts{
     animation-name: OpacityMenuAnimation;
-    animation-duration: 500ms;
+    animation-duration: 1500ms;
     animation-delay: 1500ms;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -549,13 +549,12 @@ img{
     0% {
         
         opacity: 0;
-        // scale: 0;
-        transform : rotate(360deg);
+        transform: translateY(25px);
+        
     }
     100% {
         
         opacity: 1;
-        // scale: 1;
      }
 }
 
@@ -626,7 +625,7 @@ $loader-color: #99E2D0;
     z-index: 999;
     top: 0;
     left: 0;
-    animation: loader-page 6s forwards;
+    animation: loader-page 100ms forwards 2s;
 }
 
 .pan-loader {
@@ -751,11 +750,11 @@ $loader-color: #99E2D0;
 
   @keyframes loader-page {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
         opacity: 0;
-        z-index: -999;
+        z-index: -1;
     }
   }
 

@@ -59,7 +59,7 @@ body {
 }
 #container-first-section h2 {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 10;
 }
 #container-first-section button {
   height: 40px;
@@ -483,8 +483,8 @@ h3 {
   opacity: 0;
   -webkit-animation-name: OpacityMenuAnimation;
           animation-name: OpacityMenuAnimation;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
   -webkit-animation-fill-mode: forwards;
@@ -494,8 +494,8 @@ h3 {
 .section-plats {
   -webkit-animation-name: OpacityMenuAnimation;
           animation-name: OpacityMenuAnimation;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
   -webkit-animation-fill-mode: forwards;
@@ -506,8 +506,8 @@ h3 {
 .section-desserts {
   -webkit-animation-name: OpacityMenuAnimation;
           animation-name: OpacityMenuAnimation;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
   -webkit-animation-delay: 1500ms;
           animation-delay: 1500ms;
   -webkit-animation-fill-mode: forwards;
@@ -518,7 +518,7 @@ h3 {
 @-webkit-keyframes OpacityMenuAnimation {
   0% {
     opacity: 0;
-    transform: rotate(360deg);
+    transform: translateY(25px);
   }
   100% {
     opacity: 1;
@@ -528,7 +528,7 @@ h3 {
 @keyframes OpacityMenuAnimation {
   0% {
     opacity: 0;
-    transform: rotate(360deg);
+    transform: translateY(25px);
   }
   100% {
     opacity: 1;
@@ -589,8 +589,8 @@ h3 {
   z-index: 999;
   top: 0;
   left: 0;
-  -webkit-animation: loader-page 6s forwards;
-          animation: loader-page 6s forwards;
+  -webkit-animation: loader-page 100ms forwards 2s;
+          animation: loader-page 100ms forwards 2s;
 }
 
 .pan-loader {
@@ -779,7 +779,7 @@ h3 {
   }
   100% {
     opacity: 0;
-    z-index: -999;
+    z-index: -1;
   }
 }
 @keyframes loader-page {
@@ -788,7 +788,7 @@ h3 {
   }
   100% {
     opacity: 0;
-    z-index: -999;
+    z-index: -1;
   }
 }
 /*Affichage Tablette et desktop*/
